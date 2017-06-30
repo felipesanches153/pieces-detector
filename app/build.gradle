@@ -5,15 +5,29 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 25
+    compileSdkVersion 26
     buildToolsVersion "26.0.0"
+
+    flavorDimensions "default"
+
     defaultConfig {
         applicationId "io.github.felipesanches153.pieces.detector"
         minSdkVersion 19
-        targetSdkVersion 25
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    productFlavors {
+        regular {
+        }
+        x86 {
+            applicationIdSuffix = ".x86"
+        }
+        x86_64 {
+            applicationIdSuffix = ".x86_64"
+        }
     }
     sourceSets { main { jni.srcDirs = [] } }
     buildTypes {

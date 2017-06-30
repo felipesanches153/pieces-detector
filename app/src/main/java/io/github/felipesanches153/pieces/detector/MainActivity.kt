@@ -7,13 +7,6 @@ import org.opencv.android.OpenCVLoader
 
 class MainActivity : Activity() {
 
-    companion object {
-
-        @JvmField
-        val TAG = "MainActivity"
-
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
